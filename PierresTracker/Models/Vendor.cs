@@ -1,6 +1,6 @@
 namespace PierresTracker.Models
 {
-  public class Vendors
+  public class Vendor
   {
     
   }

@@ -7,9 +7,10 @@ namespace PierresTracker.Tests
   public class VendorTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void VendorConstructor_CreatesAVendorConstructor_Vendor()
     {
-      
+      Vendor newVendor = new Vendor();
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
   }
 }
