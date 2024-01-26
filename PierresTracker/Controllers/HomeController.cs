@@ -5,7 +5,7 @@ namespace PierresTracker.Controllers
 {
   public class HomeController : Controller
   {
-    [Route("/")]
-    public string Index() { return "Hello Pierre!"; }
+    [HttpGet("/")]
+    public ActionResult Index() { return View(); }
   }
 }
