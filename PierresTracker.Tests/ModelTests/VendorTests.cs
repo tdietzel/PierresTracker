@@ -32,5 +32,12 @@ namespace PierresTracker.Tests
       Vendor newVendor = new Vendor("Suzie's Cafe");
       Assert.AreEqual(1, newVendor.Id);
     }
+    [TestMethod]
+    public void AddsVendorToList_ReturnsVendorList_List()
+    {
+      Vendor newVendor = new Vendor("Suzie's Cafe");
+      List<Vendor> allVendors = new List<Vendor> { newVendor };
+      Assert.AreEqual(newVendor, allVendors[0]);
+    }
   }
 }
