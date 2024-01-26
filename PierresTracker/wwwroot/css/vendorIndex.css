@@ -1,0 +1,22 @@
+.page-style {
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.vendor-list {
+  text-align: center;
+}
+.nav-buttons {
+  text-align: center;
+}
+.nav-buttons button {
+  margin-top: 1rem;
+}
+#new-vendor-btn {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
