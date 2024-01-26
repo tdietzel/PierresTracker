@@ -10,6 +10,7 @@ namespace PierresTracker.Tests
     public void Dispose()
     {
       Vendor.ResetNextId();
+      Vendor.ClearAll();
     }
 
     [TestMethod] // Test #1
@@ -60,6 +61,17 @@ namespace PierresTracker.Tests
       newVendor.Orders.Add(newOrder);
 
       Assert.AreEqual(newOrder, newVendor.Orders[0]);
+    }
+    [TestMethod] // Test #7
+    public void GetAllVendors_ReturnsVendorInstances_List()
+    {
+      Vendor firstVendor = new Vendor("", "");
+      Vendor anotherVendor = new Vendor("", "");
+
+      List<Vendor> newVendors = new List<Vendor> { firstVendor, anotherVendor };
+      List<Vendor> allVendors = Vendor.GetAll();
+      
+      CollectionAssert.AreEqual(newVendors, allVendors);
     }
   }
 }

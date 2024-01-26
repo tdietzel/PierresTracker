@@ -9,7 +9,7 @@ namespace PierresTracker.Models
     public string Name { get; set; }
     public string Description { get; set; }
     public int Id { get; set; }
-    private static int nextId = 0;
+    private static int nextId = 1;
 
     public Vendor(string name, string description)
     {
@@ -20,9 +20,19 @@ namespace PierresTracker.Models
       Orders = new List<Order> ();
     }
 
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
+
     public static void ResetNextId()
     {
       nextId = 1;
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
