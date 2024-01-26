@@ -9,22 +9,30 @@
       rel="stylesheet" 
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="~/css/orderIndex.css">
     <meta charset='utf-8'>
   </head>
   <body>
-    <h1>Current Orders</h1>
-    @if (Model.Count == 0)
-    {
-      <p>No current orders. Add one below!</p>
-    } else
-    {
-      @foreach (Order order in Model["orders"])
+    <div class="page-style">
+      <h1>Current Orders</h1>
+      @if (Model["orders"].Count == 0)
       {
-        <h3>@order.Title $@order.Price</h3>
-        <p>@order.Description</p>
-        <p>@order.Date</p>
+        <b><p>No current orders. Add one below!</p></b>
+      } else
+      {
+        @foreach (Order order in Model["orders"])
+        {
+          <h3>@order.Title $@order.Price</h3>
+          <p>@order.Description</p>
+          <p>@order.Date</p>
+        }
       }
-    }
-    <a href='/vendors/@Model["vendor"].Id/orders/new'>New order</a>
+      <form action='/vendors/@Model["vendor"].Id/orders/new' method="get">
+        <button id="new-order-btn" type="submit">New Order</button>
+      </form>
+      <form action="/vendors" method="get">
+        <button id="back-btn" type="submit">Go back to Vendors</button>
+      </form>
+    </div>
   </body>
 </html>
