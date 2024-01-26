@@ -1,15 +1,15 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ExampleName.Models;
+using PierresTracker.Models;
 
-namespace ProjectName.Tests
+namespace PierresTracker.Tests
 {
   [TestClass]
-  public class ClassNameTests
+  public class VendorTests
   {
     [TestMethod]
     public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
     {
-      // Tests will go here
+      
     }
   }
 }
