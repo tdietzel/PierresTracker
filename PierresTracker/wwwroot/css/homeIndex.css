@@ -1,0 +1,15 @@
+.page-style {
+  height: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.page-style button {
+  padding: 1rem;
+  font-weight: bold;
+  background-color: lightblue;
+}
+body {
+  background: linear-gradient(to bottom right, #00ffff, #3a2ee5);
+}

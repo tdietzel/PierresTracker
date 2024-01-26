@@ -18,3 +18,6 @@
   padding: 5px;
   border-radius: 0;
 }
+body {
+  background: linear-gradient(to bottom right, #00ffff, #3a2ee5);
+}

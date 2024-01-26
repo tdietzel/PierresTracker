@@ -1,5 +1,5 @@
 .page-style {
-  height: 40rem;
+  height: 60rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,6 +7,13 @@
 }
 .vendor-list {
   text-align: center;
+}
+.vendor-list a {
+  color:white;
+  font-weight: bold;
+}
+.vendor-list p {
+  font-weight: bold;
 }
 .nav-buttons {
   text-align: center;
@@ -25,4 +32,7 @@
   color: white;
   padding: 5px;
   border-radius: 0;
+}
+body {
+  background: linear-gradient(to bottom right, #00ffff, #3a2ee5);
 }
