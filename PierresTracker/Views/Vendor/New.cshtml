@@ -7,13 +7,22 @@
       rel="stylesheet" 
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="~/css/vendorNew.css">
     <meta charset='utf-8'>
   </head>
   <body>
-    <form action="/vendors" method="post">
-      <input id="name" name="name">
-      <input id="description" name="description">
-      <button type="submit">Add vendor</button>
-    </form>
+    <div class="vendor-form">
+      <form action="/vendors" method="post">
+        <h3>Vendor Name</h3>
+        <input id="name" name="name">
+        <h5>Vendor Description</h5>
+        <input id="description" name="description">
+        <br>
+        <button type="submit">Add Vendor</button>
+      </form>
+      <form action="/vendors" method="get">
+        <button id="back-btn" type="submit">Go back</button>
+      </form>
+    </div>
   </body>
 </html>
