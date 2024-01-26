@@ -73,5 +73,14 @@ namespace PierresTracker.Tests
       
       CollectionAssert.AreEqual(newVendors, allVendors);
     }
+    [TestMethod] // Test #8
+    public void FindVendor_ReturnsVendorInstance_Vendor()
+    {
+      Vendor firstVendor = new Vendor("vendor1", "");
+      Vendor anotherVendor = new Vendor("vendor2", "");
+
+      Vendor selectedVendor = Vendor.Find(2);
+      Assert.AreEqual(anotherVendor, selectedVendor);
+    }
   }
 }
