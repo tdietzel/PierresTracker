@@ -14,13 +14,14 @@ namespace PierresTracker.Controllers
     }
 
     [HttpPost("/vendors")]
-    public ActionResult Show(string name, string description)
+    public ActionResult Create(string name, string description)
     {
       Vendor newVendor = new Vendor(name, description);
       return RedirectToAction("Index");
+      // return RedirectToAction("Index", "Home");
     }
 
     [HttpGet("/vendors/new")]
-    public ActionResult Create() { return View(); }
+    public ActionResult New() { return View(); }
   }
 }

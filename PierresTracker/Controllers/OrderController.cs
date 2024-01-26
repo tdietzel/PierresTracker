@@ -21,17 +21,17 @@ namespace PierresTracker.Controllers
     }
 
     [HttpGet("/vendors/{id}/orders/new")]
-    public ActionResult Create(int id)
+    public ActionResult New(int id)
     {
       Vendor selectedVendor = Vendor.Find(id);
       return View(selectedVendor);
     }
     
     [HttpPost("/vendors/{id}/orders")]
-    public ActionResult Show(int id, string title, string description, int price, string date)
+    public ActionResult Create(int id, string title, string description, int price, string date)
     {
       Vendor selectedVendor = Vendor.Find(id);
-      
+
       Order newOrder = new Order(title, description, price, date);
       selectedVendor.Orders.Add(newOrder);
     
