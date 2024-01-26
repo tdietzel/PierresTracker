@@ -31,9 +31,8 @@ namespace PierresTracker.Tests
     [TestMethod]  // Test #5
     public void GetsVendorDescription_ReturnsDescription_String()
     {
-      string name= "Suzie's Cafe";
       string description = "The Cafe on 3rd street in testing city";
-      Vendor newVendor = new Vendor(name, description);
+      Vendor newVendor = new Vendor("Name", description);
       string result = newVendor.Description;
 
       Assert.AreEqual(description, result);
@@ -41,19 +40,26 @@ namespace PierresTracker.Tests
     [TestMethod]  // Test #3
     public void GetsVendorId_ReturnsId_Int()
     {
-      string description = "The Cafe on 3rd street in testing city";
-      Vendor newVendor = new Vendor("Suzie's Cafe", description);
+      Vendor newVendor = new Vendor("Name", "Description");
 
       Assert.AreEqual(1, newVendor.Id);
     }
     [TestMethod]  // Test #4
     public void AddsVendorToList_ReturnsVendorList_List()
     {
-      string description = "The Cafe on 3rd street in testing city";
-      Vendor newVendor = new Vendor("Suzie's Cafe", description);
+      Vendor newVendor = new Vendor("Name", "Description");
       List<Vendor> allVendors = new List<Vendor> { newVendor };
 
       Assert.AreEqual(newVendor, allVendors[0]);
+    }
+    [TestMethod] // Test #6
+    public void CreatesNewListOfOrders_ReturnsOrdersInList_List()
+    {
+      Vendor newVendor = new Vendor("", "");
+      Order newOrder = new Order("Name", "Description", 0, "Date");
+      newVendor.Orders.Add(newOrder);
+
+      Assert.AreEqual(newOrder, newVendor.Orders[0]);
     }
   }
 }
