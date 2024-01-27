@@ -1,9 +1,9 @@
-# *CSHARP Template README*
+# *Pierres Vendor & Order Tracker*
 #### By Trent Dietzel
 
 ## Table of Contents
 - [About](#about)
-- [Features](#features)
+- [Features](#for-vendors)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Contributing](#contributing)
@@ -12,16 +12,16 @@
 - [Contact](#contact)
 
 ## About
-*ABOUT SECTION*
+The primary functionality of the application is to manage vendors and orders. Users can perform the following actions:
 
-The primary functionality of the application is *FILL IN*...:
-- 
--
--
+### For Vendors:
+- View a list of current vendors.
+- Add a new vendor.
+- View orders associated with a specific vendor.
 
-## Features
-- **FEATURE**: 
-- **FEATURE**: 
+### For Orders:
+- View a list of current orders.
+- Add a new order for a specific vendor.
 
 ## Technologies Used
 - **Language**: C#
@@ -38,11 +38,11 @@ Follow these steps to set up the project locally:
 1. Open Git BASH [Download Link](https://gitforwindows.org/)
 2. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/tdietzel/*PROJECT NAME*
+   git clone https://github.com/tdietzel/PierresTracker
    ```
 3. Open the project directory:
    ```bash
-   cd *PROJECT NAME*
+   cd PierresTracker
    ```
 4. Open in a code editor like __Visual Studio Code__.
 5. In the command line, run the command ``` dotnet run ``` to compile and execute the console application. Since this is a console application, you'll interact with it through text commands in your terminal.
